@@ -1,0 +1,12 @@
+version: "3.9"
+name: tgid-teste
+
+services:
+  json-server:
+    build:
+      context: ./json-server
+      dockerfile: DockerFile
+    ports:
+      - "3001:3001"
+    volumes:
+      - ../database/dbTeste.json:/app/db.json

@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Relógio",
+      "description": "relógio masculino de aço inoxidável completo azul masculino de quartzo luminoso analógico relógio de pulso moda casual",
+      "price": 3999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Relógio",
+      "description": "relógio masculino de aço inoxidável completo azul masculino de quartzo luminoso analógico relógio de pulso moda casual",
+      "price": 3999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Relógio",
+      "description": "relógio masculino de aço inoxidável completo azul masculino de quartzo luminoso analógico relógio de pulso moda casual",
+      "price": 3999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Relógio",
+      "description": "relógio masculino de aço inoxidável completo azul masculino de quartzo luminoso analógico relógio de pulso moda casual",
+      "price": 3999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Relógio",
+      "description": "relógio masculino de aço inoxidável completo azul masculino de quartzo luminoso analógico relógio de pulso moda casual",
+      "price": 3999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Relógio",
+      "description": "relógio masculino de aço inoxidável completo azul masculino de quartzo luminoso analógico relógio de pulso moda casual",
+      "price": 3999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Relógio",
+      "description": "relógio masculino de aço inoxidável completo azul masculino de quartzo luminoso analógico relógio de pulso moda casual",
+      "price": 3999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Relógio",
+      "description": "relógio masculino de aço inoxidável completo azul masculino de quartzo luminoso analógico relógio de pulso moda casual",
+      "price": 3999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Relógio",
+      "description": "relógio masculino de aço inoxidável completo azul masculino de quartzo luminoso analógico relógio de pulso moda casual",
+      "price": 3999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Relógio",
+      "description": "relógio masculino de aço inoxidável completo azul masculino de quartzo luminoso analógico relógio de pulso moda casual",
+      "price": 3999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    }
+  ]
+}
