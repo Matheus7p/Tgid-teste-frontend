@@ -3,10 +3,10 @@ import { TUiIconTypes } from "./icon-types.enum";
 export const uiIconTypeSizeMap = new Map<TUiIconTypes, { width: number, height: number}>([
   [
     "bag",
-    { width: 24, height: 24 }
+    { width: 40, height: 40 }
   ],
   [
     "search",
-    { width: 24, height: 24} ,
+    { width: 40, height: 40 } ,
   ],
 ])
