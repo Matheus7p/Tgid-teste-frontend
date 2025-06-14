@@ -7,6 +7,7 @@ import { Card, CardContent, CardFooter, CardTitle } from "../components/ui/card"
 import { Button } from "../components/ui/button";
 import { useState } from "react";
 import { ProductModal } from "../components/productModal/productModal.component";
+import { formatToBRL } from "@/shared/utils/formatToBrL.utils";
 
 export function Home() {
   const { products } = useProductsContext();
@@ -44,7 +45,7 @@ export function Home() {
                 <CardContent>
                   <img src={product.image} alt={product.name} className="rounded"/>
                   <p className="font-semibold text-[0.5rem] text-zinc-500 mt-2">{product.description}</p>
-                  <p>{product.price}</p>
+                  <p>R$ {formatToBRL(product.price)}</p>
                 </CardContent>
                 <CardFooter>
                   <Button variant="outline" className="w-full" onClick={() => handleModalOpen(product.id)}>

@@ -1,6 +1,7 @@
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/app/components/ui/dialog";
 import { IProductModel } from "@/domain/models/product.model";
 import { Button } from "../ui/button";
+import { formatToBRL } from "@/shared/utils/formatToBrL.utils";
 
 interface IProductModalProps {
   product: IProductModel;
@@ -19,7 +20,7 @@ export function ProductModal({ product, isOpen, onClose} : IProductModalProps) {
            </div>
             <DialogDescription className="text-start">{product.description}</DialogDescription>
           </DialogHeader>
-          <div className="mt-4">{product.price}</div>
+          <div className="mt-4">R$ {formatToBRL(product.price)}</div>
           <div className="mt-6 text-right">
             <Button>Comprar</Button>
           </div>
