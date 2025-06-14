@@ -8,10 +8,14 @@ import { Button } from "../components/ui/button";
 import { useState } from "react";
 import { ProductModal } from "../components/productModal/productModal.component";
 import { formatToBRL } from "@/shared/utils/formatToBrL.utils";
+import { IProductModel } from "@/domain/models/product.model";
+import { Alert } from "../components/ui/alert/alert.ui";
 
 export function Home() {
   const { products } = useProductsContext();
   const [ selectedProductId, setSelectedProductId ] = useState<number | null>(null);
+  const [ alertInfo, setAlertInfo] = useState<{ name: string; price: number } | null>(null);
+
 
   const handleModalOpen = (productId: number) => {
     setSelectedProductId(productId);
@@ -25,8 +29,23 @@ export function Home() {
     ? products.find(p => p.id === selectedProductId)
     : null;
 
+  const handleProductAdded = (product: IProductModel) => {
+    setAlertInfo({ name: product.name, price: product.price });
+    setTimeout(() => {
+      setAlertInfo(null);
+    }, 3000);
+  };
+  
+
   return (
     <main className="flex flex-col min-h-screen">
+      {alertInfo && (
+        <Alert variant="success">
+          <p className="font-bold">Adicionado ao carrinho!</p>
+          <p>"{alertInfo.name}" foi adicionado com sucesso.</p>
+        </Alert>
+      )}
+
       <section className="flex-grow">
         <section className="bg-gray-900 h-[220px] lg:h-[550px] shadow-slate-300 rounded-b-4xl">
           <Header />
@@ -44,7 +63,7 @@ export function Home() {
                 <CardTitle className="text-center ">{product.name}</CardTitle>
                 <CardContent>
                   <img src={product.image} alt={product.name} className="rounded"/>
-                  <p className="font-semibold text-[0.5rem] text-zinc-500 mt-2">{product.description}</p>
+                  <p className="font-semibold text-[0.7rem] text-zinc-500 mt-2 mb-2">{product.description}</p>
                   <p>R$ {formatToBRL(product.price)}</p>
                 </CardContent>
                 <CardFooter>
@@ -59,7 +78,7 @@ export function Home() {
       </section>
 
       {productToShow ? (
-          <ProductModal product={productToShow} isOpen={!!productToShow} onClose={handleModalClose}/>
+          <ProductModal product={productToShow} isOpen={!!productToShow} onClose={handleModalClose} onProductAdd={handleProductAdded}/>
       ) : null}
       <Footer />
     </main>
