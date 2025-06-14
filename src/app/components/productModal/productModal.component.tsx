@@ -7,14 +7,16 @@ interface IProductModalProps {
   product: IProductModel;
   isOpen: boolean;
   onClose: () => void;
+   onProductAdd: (product: IProductModel) => void;
 }
 
-export function ProductModal({ product, isOpen, onClose} : IProductModalProps) {
+export function ProductModal({ product, isOpen, onClose, onProductAdd} : IProductModalProps) {
 
   const handleAddToCart = () => {
     const cart = JSON.parse(localStorage.getItem("cart") || "[]");
     const updatedCart = [...cart, product];
     localStorage.setItem("cart", JSON.stringify(updatedCart));
+    onProductAdd(product)
     onClose();
   };
 
@@ -33,6 +35,6 @@ export function ProductModal({ product, isOpen, onClose} : IProductModalProps) {
             <Button onClick={handleAddToCart}>Comprar</Button>
           </div>
         </DialogContent>
-    </Dialog>
+  </Dialog>
   )
 }
