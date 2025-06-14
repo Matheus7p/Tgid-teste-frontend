@@ -10,14 +10,14 @@ const _CLOCK = [
 
 const renderClockCard = (): JSX.Element => {
   return(
-    <div className="flex flex-col lg:flex-row justify-between gap-2 lg:gap-5 items-center mx-4 lg:mx-60" data-aos="fade-up">
+    <div className="flex flex-col xl:flex-row justify-between gap-2 xl:gap-5 items-center max-w-screen-xl mx-auto" data-aos="fade-up">
       {_CLOCK.map((clock, index) => (
-        <div key={index} className="flex flex-row lg:flex-col max-w-60 lg:max-w-96 h-auto lg:h-[575px] items-center lg:gap-2 rounded-lg bg-zinc-300/50 shadow-2xl p-4 backdrop-blur">
-          <div className="flex flex-col w-40">
-            <h4 className="font-semibold lg:text-2xl ml-2 lg:ml-0">{clock.name}</h4>
-            <img className="w-28 h-28 lg:w-72 lg:h-72 rounded-xl lg:rounded-2xl shadow-lg lg:mb-12" src={clock.image} />
+        <div key={index} className="flex flex-row xl:flex-col max-w-60 xl:max-w-96 h-auto xl:h-[575px] items-center lg:gap-2 rounded-lg bg-zinc-300/50 shadow-2xl p-4 backdrop-blur">
+          <div className="flex flex-col xl:items-center w-40 xl:w-96">
+            <h4 className="font-semibold xl:text-2xl ml-2 xl:ml-0">{clock.name}</h4>
+            <img className="w-28 h-28 xl:w-72 xl:h-72 rounded-xl xl:rounded-2xl shadow-xl xl:mb-12" src={clock.image} />
           </div>
-          <p className="text-start font-semibold text-[0.5rem] lg:text-xl max-w-20">{clock.description}</p>
+          <p className="text-start xl:text-center font-semibold text-[0.5rem] xl:text-xl max-w-20 xl:max-w-96">{clock.description}</p>
         </div>
       ))}
     </div>
