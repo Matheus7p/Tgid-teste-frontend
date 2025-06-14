@@ -5,6 +5,5 @@ const PRODUCTS_JSON_URL = "http://localhost:3001/products";
 
 export async function getAllProducts(): Promise<IProductModelResponse> {
   const { data } = await axios.get(PRODUCTS_JSON_URL);
-  console.log("API Response:", data);
   return { products: data };
 }
