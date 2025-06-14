@@ -14,7 +14,7 @@ const renderHeaderLeft = (): JSX.Element => {
       {_HEADER_LINKS.map((item, index) => (
         <p
           key={index}
-          className="text-xl lg:text-2xl duration-150 underline-animation hover:scale-105 hover:cursor-pointer"
+          className="text-xl lg:text-2xl duration-150 underline-animation hover:scale-105 hover:cursor-pointer text-center"
         >
           {item.title}
         </p>

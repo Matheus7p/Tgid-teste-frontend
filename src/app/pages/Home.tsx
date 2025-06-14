@@ -6,14 +6,15 @@ export function Home() {
   const { products } = useProductsContext();
 
   return (
-    <main className="h-screen bg-gray-200">
-      <section className="bg-black lg:h-2/3 shadow-slate-300 rounded-b-4xl">
+    <main className="">
+      <section className="bg-black h-[400px] lg:h-[550px] shadow-slate-300 rounded-b-4xl">
         <Header />
+        <section className="mt-[12vh]">
+          <HeroSection />
+        </section>
       </section>
     
-      <section className="xl:mt-[-40vh]">
-       <HeroSection />
-      </section>
+      
 
       <section className="">
         {products.map((product) => (
