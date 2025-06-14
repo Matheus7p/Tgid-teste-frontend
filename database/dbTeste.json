@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Relógio Elegance",
+      "description": "Relógio masculino com design moderno e pulseira de couro legítimo.",
+      "price": 2499.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Relógio Sport Pro",
+      "description": "Relógio esportivo com resistência à água e cronômetro integrado.",
+      "price": 1999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Relógio Classic",
+      "description": "Relógio clássico com mostrador minimalista e pulseira de aço inoxidável.",
+      "price": 2999.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Relógio Lux",
+      "description": "Relógio de luxo com detalhes dourados e vidro de safira.",
+      "price": 4599.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Relógio Digital Tech",
+      "description": "Relógio digital com conexão Bluetooth e funções inteligentes.",
+      "price": 1599.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Relógio Vintage",
+      "description": "Relógio retrô com mostrador analógico e pulseira de nylon.",
+      "price": 1399.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Relógio Adventure",
+      "description": "Relógio resistente a impactos, ideal para trilhas e aventuras.",
+      "price": 1799.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Relógio Business",
+      "description": "Relógio sdofisticado para o ambiente corporativo com acabamento premium.",
+      "price": 3399.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Relógio Slim",
+      "description": "Relógio ultrafino com mostrador elegante e pulseira de silicone.",
+      "price": 1299.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Relógio Aviator",
+      "description": "Relógio inspirado na aviação com múltiplos fusos horários.",
+      "price": 3799.90,
+      "image": "https://m.media-amazon.com/images/I/51sc7a6ZP0L._AC_SY900_.jpg"
+    }
+  ]
+}
