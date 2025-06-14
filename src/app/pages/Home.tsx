@@ -5,9 +5,24 @@ import { Footer } from "../components/footer/footer.component";
 import { Carousel } from "../components/ui/carousel/carousel.ui";
 import { Card, CardContent, CardFooter, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
+import { useState } from "react";
+import { ProductModal } from "../components/productModal/productModal.component";
 
 export function Home() {
   const { products } = useProductsContext();
+  const [ selectedProductId, setSelectedProductId ] = useState<number | null>(null);
+
+  const handleModalOpen = (productId: number) => {
+    setSelectedProductId(productId);
+  };
+
+  const handleModalClose = () => {
+    setSelectedProductId(null);
+  };
+
+  const productToShow = selectedProductId
+    ? products.find(p => p.id === selectedProductId)
+    : null;
 
   return (
     <main className="flex flex-col min-h-screen">
@@ -20,7 +35,7 @@ export function Home() {
         </section>
       </section>
 
-      <section className="mt-[100vh] lg:mt-[40vh]">
+      <section className="mt-[100vh] lg:mt-[40vh] mb-4">
         <Carousel defaultVisibleCards={5}>
           {products.map((product, index) => (
             <div key={index}>
@@ -32,7 +47,7 @@ export function Home() {
                   <p>{product.price}</p>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full" onClick={() => handleModalOpen(product.id)}>
                     Comprar
                   </Button>
                 </CardFooter>
@@ -42,6 +57,9 @@ export function Home() {
         </Carousel>
       </section>
 
+      {productToShow ? (
+          <ProductModal product={productToShow} isOpen={!!productToShow} onClose={handleModalClose}/>
+      ) : null}
       <Footer />
     </main>
   );
