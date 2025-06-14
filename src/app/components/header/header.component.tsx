@@ -23,11 +23,26 @@ const renderHeaderLeft = (): JSX.Element => {
   );
 };
 
+const getLengthProductInCart = () : number => {
+  const cartJson = localStorage.getItem("cart");
+  if(!cartJson) return 0;
+  const cart = JSON.parse(cartJson);
+  return cart.length;
+}
+
 const renderHeaderRight = (): JSX.Element => {
+  const cartCount = getLengthProductInCart();
   return (
     <div className="flex flex-row gap-6 lg:gap-12">
         <Icon type="search" className="hover:scale-115 hover:cursor-pointer duration-300"/>
-        <Icon type="bag" className="hover:scale-115 hover:cursor-pointer duration-300"/>
+        <div className="relative">
+          <Icon type="bag" className="hover:scale-115 hover:cursor-pointer duration-300" />
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+              {cartCount}
+            </span>
+          )}
+        </div>
     </div>
   );
 };

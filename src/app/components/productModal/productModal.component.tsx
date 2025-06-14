@@ -10,6 +10,14 @@ interface IProductModalProps {
 }
 
 export function ProductModal({ product, isOpen, onClose} : IProductModalProps) {
+
+  const handleAddToCart = () => {
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    const updatedCart = [...cart, product];
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    onClose();
+  };
+
   return(
     <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogContent className="max-w-lg lg:max-h-[100vh]">
@@ -22,7 +30,7 @@ export function ProductModal({ product, isOpen, onClose} : IProductModalProps) {
           </DialogHeader>
           <div className="mt-4">R$ {formatToBRL(product.price)}</div>
           <div className="mt-6 text-right">
-            <Button>Comprar</Button>
+            <Button onClick={handleAddToCart}>Comprar</Button>
           </div>
         </DialogContent>
     </Dialog>
